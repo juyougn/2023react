@@ -1,25 +1,177 @@
-*{
-  margin: 0;padding: 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-li{
-  list-style: none;
-}
+
+li{list-style: none;}
+
 .flex{
   display: flex;
   /* border: 1px solid #000; */
   justify-content: space-between;
   padding: 0 10px;
 }
+
 .modal{
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   width: 300px;
   height: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  /* flex는 기본 가로 */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.myP{
+  color: #f00;
+  background-color: skyblue;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: skyblue;
+}
+
+.tab > ul{
+  display: flex;
+}
+
+.tab > ul > li{
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #000;
+  border-right: 0 none;
+}
+
+.tab > ul > li:last-child{
+  border-right: 1px solid #000;
+}
+
+.tab > ul > li.active{
+  background: skyblue;
+  border-bottom: 0 none;
+}
+
+.lists > li{
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.lists > li:hover{
+  background: skyblue;
+}
+
+.btnWrap{
+  display: flex;
+  justify-content: end;
+}
+
+.btnWrap button{
+  padding: 5px 15px;
+}
+
+.num{
+  background-color: skyblue;
+  display: inline;
+  width: 50px;
+
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img{
+  width: 100%;
+}
+
+.visualWrap{
+  background: gray;
+  
+}
+
+.contentWrap01{
+  background: papayawhip;
+}
+
+.dot{
+  position: relative;
+
+}
+/* after/before 자식의 앞뒤 */
+.dot::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #000;
+  margin: 10px auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-700%);
+}
+
+.card{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translate(-10px, -10px);
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner{
+  height: 400px;
+}
+
+.icon{
+  width: 70px;
+  height: 70px;
+  background: skyblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img{
+  position: absolute;
+  
+}
+
+/* background-image */
+.banWrap{
+  background-image: url(./assets/img/bannerBg01.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
